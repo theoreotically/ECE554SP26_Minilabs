@@ -14,6 +14,8 @@ module mat_vec_mult_tb ();
   logic [DATA_WIDTH*3-1:0] out[7:0];
 
   //generate unpacked versions of a_fifo_in, b_fifo_in, out
+  logic [DATA_WIDTH*3-1:0] out_0;
+  assign out_0=out[0];
 
   genvar i;
   generate
@@ -81,6 +83,21 @@ mat_vec_mult iDUT (
     val_b=8'b1;
 
     load_fifo_a(val_a);
+    load_fifo_a(val_a);
+    load_fifo_a(val_a);
+    load_fifo_a(val_a);
+    load_fifo_a(val_a);
+    load_fifo_a(val_a);
+    load_fifo_a(val_a);
+    load_fifo_a(val_a);
+
+    load_fifo_b(val_b);
+    load_fifo_b(val_b);
+    load_fifo_b(val_b);
+    load_fifo_b(val_b);
+    load_fifo_b(val_b);
+    load_fifo_b(val_b);
+    load_fifo_b(val_b);
     load_fifo_b(val_b);
 
   end

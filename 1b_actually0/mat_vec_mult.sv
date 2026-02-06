@@ -127,7 +127,7 @@ module mat_vec_mult #(
       MAC mat_arr (
           .clk(clk),
           .rst_n(rst_n),
-          .En(En),
+          .En(a_rden[i]),
           .Clr(Clr),
           .Ain(a_mat_out[i]),
           .Bin(shift_reg[i]),
