@@ -1,0 +1,929 @@
+Analysis & Synthesis report for minilab1b
+Fri Feb  6 00:45:53 2026
+Quartus Prime Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis RAM Summary
+  9. Analysis & Synthesis DSP Block Usage Summary
+ 10. State Machine - |minilab1b|mem_wrapper:iRemember|state
+ 11. General Register Statistics
+ 12. Inverted Register Statistics
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Source assignments for mem_wrapper:iRemember|rom:memory|altsyncram:altsyncram_component|altsyncram_tdg1:auto_generated
+ 15. Parameter Settings for User Entity Instance: Top-level Entity: |minilab1b
+ 16. Parameter Settings for User Entity Instance: mem_wrapper:iRemember|rom:memory|altsyncram:altsyncram_component
+ 17. Parameter Settings for User Entity Instance: mat_vec_mult:iMAC
+ 18. Parameter Settings for User Entity Instance: mat_vec_mult:iMAC|FIFO:b_vec
+ 19. Parameter Settings for User Entity Instance: mat_vec_mult:iMAC|FIFO:hw[0].a_mat
+ 20. Parameter Settings for User Entity Instance: mat_vec_mult:iMAC|MAC:hw[0].mat_arr
+ 21. Parameter Settings for User Entity Instance: mat_vec_mult:iMAC|FIFO:hw[1].a_mat
+ 22. Parameter Settings for User Entity Instance: mat_vec_mult:iMAC|MAC:hw[1].mat_arr
+ 23. Parameter Settings for User Entity Instance: mat_vec_mult:iMAC|FIFO:hw[2].a_mat
+ 24. Parameter Settings for User Entity Instance: mat_vec_mult:iMAC|MAC:hw[2].mat_arr
+ 25. Parameter Settings for User Entity Instance: mat_vec_mult:iMAC|FIFO:hw[3].a_mat
+ 26. Parameter Settings for User Entity Instance: mat_vec_mult:iMAC|MAC:hw[3].mat_arr
+ 27. Parameter Settings for User Entity Instance: mat_vec_mult:iMAC|FIFO:hw[4].a_mat
+ 28. Parameter Settings for User Entity Instance: mat_vec_mult:iMAC|MAC:hw[4].mat_arr
+ 29. Parameter Settings for User Entity Instance: mat_vec_mult:iMAC|FIFO:hw[5].a_mat
+ 30. Parameter Settings for User Entity Instance: mat_vec_mult:iMAC|MAC:hw[5].mat_arr
+ 31. Parameter Settings for User Entity Instance: mat_vec_mult:iMAC|FIFO:hw[6].a_mat
+ 32. Parameter Settings for User Entity Instance: mat_vec_mult:iMAC|MAC:hw[6].mat_arr
+ 33. Parameter Settings for User Entity Instance: mat_vec_mult:iMAC|FIFO:hw[7].a_mat
+ 34. Parameter Settings for User Entity Instance: mat_vec_mult:iMAC|MAC:hw[7].mat_arr
+ 35. altsyncram Parameter Settings by Entity Instance
+ 36. Port Connectivity Checks: "mat_vec_mult:iMAC|FIFO:hw[5].a_mat"
+ 37. Port Connectivity Checks: "mat_vec_mult:iMAC|FIFO:hw[4].a_mat"
+ 38. Port Connectivity Checks: "mat_vec_mult:iMAC|FIFO:hw[3].a_mat"
+ 39. Port Connectivity Checks: "mat_vec_mult:iMAC|FIFO:hw[2].a_mat"
+ 40. Port Connectivity Checks: "mat_vec_mult:iMAC|FIFO:hw[1].a_mat"
+ 41. Port Connectivity Checks: "mat_vec_mult:iMAC|MAC:hw[0].mat_arr"
+ 42. Port Connectivity Checks: "mat_vec_mult:iMAC|FIFO:hw[0].a_mat"
+ 43. Port Connectivity Checks: "mem_wrapper:iRemember|rom:memory"
+ 44. Port Connectivity Checks: "mem_wrapper:iRemember"
+ 45. Post-Synthesis Netlist Statistics for Top Partition
+ 46. Elapsed Time Per Partition
+ 47. Analysis & Synthesis Messages
+ 48. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2025  Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Altera and sold by Altera or its authorized distributors.  Please
+refer to the Altera Software License Subscription Agreements 
+on the Quartus Prime software download page.
+
+
+
++-----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                      ;
++---------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Fri Feb  6 00:45:53 2026           ;
+; Quartus Prime Version           ; 25.1std.0 Build 1129 10/21/2025 SC Lite Edition ;
+; Revision Name                   ; minilab1b                                       ;
+; Top-level Entity Name           ; minilab1b                                       ;
+; Family                          ; Cyclone V                                       ;
+; Logic utilization (in ALMs)     ; N/A                                             ;
+; Total registers                 ; 1060                                            ;
+; Total pins                      ; 70                                              ;
+; Total virtual pins              ; 0                                               ;
+; Total block memory bits         ; 576                                             ;
+; Total DSP Blocks                ; 8                                               ;
+; Total HSSI RX PCSs              ; 0                                               ;
+; Total HSSI PMA RX Deserializers ; 0                                               ;
+; Total HSSI TX PCSs              ; 0                                               ;
+; Total HSSI PMA TX Serializers   ; 0                                               ;
+; Total PLLs                      ; 0                                               ;
+; Total DLLs                      ; 0                                               ;
++---------------------------------+-------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
+; Top-level entity name                                                           ; minilab1b          ; minilab1b          ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 6           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 6           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
+;     Processor 5            ;   0.0%      ;
+;     Processor 6            ;   0.0%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                               ;
++----------------------------------+-----------------+----------------------------------------+----------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                                 ; Library ;
++----------------------------------+-----------------+----------------------------------------+----------------------------------------------------------------------------------------------+---------+
+; minilab1b.sv                     ; yes             ; User SystemVerilog HDL File            ; C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b.sv           ;         ;
+; mac.sv                           ; yes             ; User SystemVerilog HDL File            ; C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/mac.sv                 ;         ;
+; fifo.sv                          ; yes             ; User SystemVerilog HDL File            ; C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/fifo.sv                ;         ;
+; rom.v                            ; yes             ; User Wizard-Generated File             ; C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/rom.v                  ;         ;
+; mat_vec_mult.sv                  ; yes             ; User SystemVerilog HDL File            ; C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/mat_vec_mult.sv        ;         ;
+; memory.v                         ; yes             ; User Verilog HDL File                  ; C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/memory.v               ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                           ; c:/altera_lite/25.1std/quartus/libraries/megafunctions/altsyncram.tdf                        ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                           ; c:/altera_lite/25.1std/quartus/libraries/megafunctions/stratix_ram_block.inc                 ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                           ; c:/altera_lite/25.1std/quartus/libraries/megafunctions/lpm_mux.inc                           ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                           ; c:/altera_lite/25.1std/quartus/libraries/megafunctions/lpm_decode.inc                        ;         ;
+; aglobal251.inc                   ; yes             ; Megafunction                           ; c:/altera_lite/25.1std/quartus/libraries/megafunctions/aglobal251.inc                        ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                           ; c:/altera_lite/25.1std/quartus/libraries/megafunctions/a_rdenreg.inc                         ;         ;
+; altrom.inc                       ; yes             ; Megafunction                           ; c:/altera_lite/25.1std/quartus/libraries/megafunctions/altrom.inc                            ;         ;
+; altram.inc                       ; yes             ; Megafunction                           ; c:/altera_lite/25.1std/quartus/libraries/megafunctions/altram.inc                            ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                           ; c:/altera_lite/25.1std/quartus/libraries/megafunctions/altdpram.inc                          ;         ;
+; db/altsyncram_tdg1.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/db/altsyncram_tdg1.tdf ;         ;
+; input_mem.mif                    ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/input_mem.mif          ;         ;
++----------------------------------+-----------------+----------------------------------------+----------------------------------------------------------------------------------------------+---------+
+
+
++--------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                  ;
++---------------------------------------------+----------------+
+; Resource                                    ; Usage          ;
++---------------------------------------------+----------------+
+; Estimate of Logic utilization (ALMs needed) ; 709            ;
+;                                             ;                ;
+; Combinational ALUT usage for logic          ; 529            ;
+;     -- 7 input functions                    ; 0              ;
+;     -- 6 input functions                    ; 338            ;
+;     -- 5 input functions                    ; 59             ;
+;     -- 4 input functions                    ; 24             ;
+;     -- <=3 input functions                  ; 108            ;
+;                                             ;                ;
+; Dedicated logic registers                   ; 1060           ;
+;                                             ;                ;
+; I/O pins                                    ; 70             ;
+; Total MLAB memory bits                      ; 0              ;
+; Total block memory bits                     ; 576            ;
+;                                             ;                ;
+; Total DSP Blocks                            ; 8              ;
+;                                             ;                ;
+; Maximum fan-out node                        ; CLOCK_50~input ;
+; Maximum fan-out                             ; 1124           ;
+; Total fan-out                               ; 7813           ;
+; Average fan-out                             ; 4.34           ;
++---------------------------------------------+----------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                 ;
++----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------+-----------------+--------------+
+; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                        ; Entity Name     ; Library Name ;
++----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------+-----------------+--------------+
+; |minilab1b                                   ; 529 (124)           ; 1060 (5)                  ; 576               ; 8          ; 70   ; 0            ; |minilab1b                                                                                                 ; minilab1b       ; work         ;
+;    |mat_vec_mult:iMAC|                       ; 393 (13)            ; 978 (75)                  ; 0                 ; 8          ; 0    ; 0            ; |minilab1b|mat_vec_mult:iMAC                                                                               ; mat_vec_mult    ; work         ;
+;       |FIFO:b_vec|                           ; 44 (44)             ; 79 (79)                   ; 0                 ; 0          ; 0    ; 0            ; |minilab1b|mat_vec_mult:iMAC|FIFO:b_vec                                                                    ; FIFO            ; work         ;
+;       |FIFO:hw[0].a_mat|                     ; 41 (41)             ; 79 (79)                   ; 0                 ; 0          ; 0    ; 0            ; |minilab1b|mat_vec_mult:iMAC|FIFO:hw[0].a_mat                                                              ; FIFO            ; work         ;
+;       |FIFO:hw[1].a_mat|                     ; 41 (41)             ; 79 (79)                   ; 0                 ; 0          ; 0    ; 0            ; |minilab1b|mat_vec_mult:iMAC|FIFO:hw[1].a_mat                                                              ; FIFO            ; work         ;
+;       |FIFO:hw[2].a_mat|                     ; 41 (41)             ; 79 (79)                   ; 0                 ; 0          ; 0    ; 0            ; |minilab1b|mat_vec_mult:iMAC|FIFO:hw[2].a_mat                                                              ; FIFO            ; work         ;
+;       |FIFO:hw[3].a_mat|                     ; 41 (41)             ; 79 (79)                   ; 0                 ; 0          ; 0    ; 0            ; |minilab1b|mat_vec_mult:iMAC|FIFO:hw[3].a_mat                                                              ; FIFO            ; work         ;
+;       |FIFO:hw[4].a_mat|                     ; 41 (41)             ; 79 (79)                   ; 0                 ; 0          ; 0    ; 0            ; |minilab1b|mat_vec_mult:iMAC|FIFO:hw[4].a_mat                                                              ; FIFO            ; work         ;
+;       |FIFO:hw[5].a_mat|                     ; 41 (41)             ; 79 (79)                   ; 0                 ; 0          ; 0    ; 0            ; |minilab1b|mat_vec_mult:iMAC|FIFO:hw[5].a_mat                                                              ; FIFO            ; work         ;
+;       |FIFO:hw[6].a_mat|                     ; 41 (41)             ; 79 (79)                   ; 0                 ; 0          ; 0    ; 0            ; |minilab1b|mat_vec_mult:iMAC|FIFO:hw[6].a_mat                                                              ; FIFO            ; work         ;
+;       |FIFO:hw[7].a_mat|                     ; 41 (41)             ; 79 (79)                   ; 0                 ; 0          ; 0    ; 0            ; |minilab1b|mat_vec_mult:iMAC|FIFO:hw[7].a_mat                                                              ; FIFO            ; work         ;
+;       |MAC:hw[0].mat_arr|                    ; 1 (1)               ; 24 (24)                   ; 0                 ; 1          ; 0    ; 0            ; |minilab1b|mat_vec_mult:iMAC|MAC:hw[0].mat_arr                                                             ; MAC             ; work         ;
+;       |MAC:hw[1].mat_arr|                    ; 1 (1)               ; 24 (24)                   ; 0                 ; 1          ; 0    ; 0            ; |minilab1b|mat_vec_mult:iMAC|MAC:hw[1].mat_arr                                                             ; MAC             ; work         ;
+;       |MAC:hw[2].mat_arr|                    ; 1 (1)               ; 24 (24)                   ; 0                 ; 1          ; 0    ; 0            ; |minilab1b|mat_vec_mult:iMAC|MAC:hw[2].mat_arr                                                             ; MAC             ; work         ;
+;       |MAC:hw[3].mat_arr|                    ; 1 (1)               ; 24 (24)                   ; 0                 ; 1          ; 0    ; 0            ; |minilab1b|mat_vec_mult:iMAC|MAC:hw[3].mat_arr                                                             ; MAC             ; work         ;
+;       |MAC:hw[4].mat_arr|                    ; 1 (1)               ; 24 (24)                   ; 0                 ; 1          ; 0    ; 0            ; |minilab1b|mat_vec_mult:iMAC|MAC:hw[4].mat_arr                                                             ; MAC             ; work         ;
+;       |MAC:hw[5].mat_arr|                    ; 1 (1)               ; 24 (24)                   ; 0                 ; 1          ; 0    ; 0            ; |minilab1b|mat_vec_mult:iMAC|MAC:hw[5].mat_arr                                                             ; MAC             ; work         ;
+;       |MAC:hw[6].mat_arr|                    ; 1 (1)               ; 24 (24)                   ; 0                 ; 1          ; 0    ; 0            ; |minilab1b|mat_vec_mult:iMAC|MAC:hw[6].mat_arr                                                             ; MAC             ; work         ;
+;       |MAC:hw[7].mat_arr|                    ; 1 (1)               ; 24 (24)                   ; 0                 ; 1          ; 0    ; 0            ; |minilab1b|mat_vec_mult:iMAC|MAC:hw[7].mat_arr                                                             ; MAC             ; work         ;
+;    |mem_wrapper:iRemember|                   ; 12 (12)             ; 77 (77)                   ; 576               ; 0          ; 0    ; 0            ; |minilab1b|mem_wrapper:iRemember                                                                           ; mem_wrapper     ; work         ;
+;       |rom:memory|                           ; 0 (0)               ; 0 (0)                     ; 576               ; 0          ; 0    ; 0            ; |minilab1b|mem_wrapper:iRemember|rom:memory                                                                ; rom             ; work         ;
+;          |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 576               ; 0          ; 0    ; 0            ; |minilab1b|mem_wrapper:iRemember|rom:memory|altsyncram:altsyncram_component                                ; altsyncram      ; work         ;
+;             |altsyncram_tdg1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 576               ; 0          ; 0    ; 0            ; |minilab1b|mem_wrapper:iRemember|rom:memory|altsyncram:altsyncram_component|altsyncram_tdg1:auto_generated ; altsyncram_tdg1 ; work         ;
++----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------+-----------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                            ;
++------------------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+---------------+
+; Name                                                                                                       ; Type ; Mode ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF           ;
++------------------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+---------------+
+; mem_wrapper:iRemember|rom:memory|altsyncram:altsyncram_component|altsyncram_tdg1:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 9            ; 64           ; --           ; --           ; 576  ; input_mem.mif ;
++------------------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+---------------+
+
+
++-----------------------------------------------+
+; Analysis & Synthesis DSP Block Usage Summary  ;
++---------------------------------+-------------+
+; Statistic                       ; Number Used ;
++---------------------------------+-------------+
+; Independent 18x18 plus 36       ; 8           ;
+; Total number of DSP blocks      ; 8           ;
+;                                 ;             ;
+; Fixed Point Unsigned Multiplier ; 8           ;
++---------------------------------+-------------+
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------+
+; State Machine - |minilab1b|mem_wrapper:iRemember|state  ;
++---------------+------------+---------------+------------+
+; Name          ; state.IDLE ; state.RESPOND ; state.WAIT ;
++---------------+------------+---------------+------------+
+; state.IDLE    ; 0          ; 0             ; 0          ;
+; state.WAIT    ; 1          ; 0             ; 1          ;
+; state.RESPOND ; 1          ; 1             ; 0          ;
++---------------+------------+---------------+------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 1060  ;
+; Number of registers using Synchronous Clear  ; 201   ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 1055  ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 964   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; mat_vec_mult:iMAC|a_rden[8]            ; 1       ;
+; mat_vec_mult:iMAC|a_rden[9]            ; 1       ;
+; mat_vec_mult:iMAC|a_rden[10]           ; 1       ;
+; mat_vec_mult:iMAC|a_rden[11]           ; 1       ;
+; mat_vec_mult:iMAC|a_rden[12]           ; 1       ;
+; mat_vec_mult:iMAC|a_rden[13]           ; 1       ;
+; mat_vec_mult:iMAC|a_rden[14]           ; 1       ;
+; mat_vec_mult:iMAC|a_rden[15]           ; 1       ;
+; mat_vec_mult:iMAC|a_rden[16]           ; 1       ;
+; Total number of inverted registers = 9 ;         ;
++----------------------------------------+---------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------+
+; 3:1                ; 24 bits   ; 48 LEs        ; 0 LEs                ; 48 LEs                 ; Yes        ; |minilab1b|mat_vec_mult:iMAC|MAC:hw[7].mat_arr|Cout[17] ;
+; 3:1                ; 24 bits   ; 48 LEs        ; 0 LEs                ; 48 LEs                 ; Yes        ; |minilab1b|mat_vec_mult:iMAC|MAC:hw[6].mat_arr|Cout[10] ;
+; 3:1                ; 24 bits   ; 48 LEs        ; 0 LEs                ; 48 LEs                 ; Yes        ; |minilab1b|mat_vec_mult:iMAC|MAC:hw[5].mat_arr|Cout[22] ;
+; 3:1                ; 24 bits   ; 48 LEs        ; 0 LEs                ; 48 LEs                 ; Yes        ; |minilab1b|mat_vec_mult:iMAC|MAC:hw[4].mat_arr|Cout[22] ;
+; 3:1                ; 24 bits   ; 48 LEs        ; 0 LEs                ; 48 LEs                 ; Yes        ; |minilab1b|mat_vec_mult:iMAC|MAC:hw[3].mat_arr|Cout[5]  ;
+; 3:1                ; 24 bits   ; 48 LEs        ; 0 LEs                ; 48 LEs                 ; Yes        ; |minilab1b|mat_vec_mult:iMAC|MAC:hw[2].mat_arr|Cout[15] ;
+; 3:1                ; 24 bits   ; 48 LEs        ; 0 LEs                ; 48 LEs                 ; Yes        ; |minilab1b|mat_vec_mult:iMAC|MAC:hw[1].mat_arr|Cout[2]  ;
+; 3:1                ; 24 bits   ; 48 LEs        ; 0 LEs                ; 48 LEs                 ; Yes        ; |minilab1b|mat_vec_mult:iMAC|MAC:hw[0].mat_arr|Cout[1]  ;
+; 8:1                ; 8 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; Yes        ; |minilab1b|mat_vec_mult:iMAC|FIFO:b_vec|o_data[1]       ;
+; 8:1                ; 8 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; Yes        ; |minilab1b|mat_vec_mult:iMAC|FIFO:hw[6].a_mat|o_data[0] ;
+; 8:1                ; 8 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; Yes        ; |minilab1b|mat_vec_mult:iMAC|FIFO:hw[7].a_mat|o_data[6] ;
+; 8:1                ; 8 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; Yes        ; |minilab1b|mat_vec_mult:iMAC|FIFO:hw[5].a_mat|o_data[1] ;
+; 8:1                ; 8 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; Yes        ; |minilab1b|mat_vec_mult:iMAC|FIFO:hw[4].a_mat|o_data[3] ;
+; 8:1                ; 8 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; Yes        ; |minilab1b|mat_vec_mult:iMAC|FIFO:hw[3].a_mat|o_data[3] ;
+; 8:1                ; 8 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; Yes        ; |minilab1b|mat_vec_mult:iMAC|FIFO:hw[2].a_mat|o_data[2] ;
+; 8:1                ; 8 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; Yes        ; |minilab1b|mat_vec_mult:iMAC|FIFO:hw[1].a_mat|o_data[0] ;
+; 8:1                ; 8 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; Yes        ; |minilab1b|mat_vec_mult:iMAC|FIFO:hw[0].a_mat|o_data[0] ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |minilab1b|mem_wrapper:iRemember|delay_counter[0]       ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |minilab1b|a_wren                                       ;
+; 9:1                ; 24 bits   ; 144 LEs       ; 144 LEs              ; 0 LEs                  ; No         ; |minilab1b|macout[5]                                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for mem_wrapper:iRemember|rom:memory|altsyncram:altsyncram_component|altsyncram_tdg1:auto_generated ;
++---------------------------------+--------------------+------+----------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                       ;
++---------------------------------+--------------------+------+----------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                        ;
++---------------------------------+--------------------+------+----------------------------------------------------------+
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |minilab1b ;
++----------------+---------+------------------------------------------------+
+; Parameter Name ; Value   ; Type                                           ;
++----------------+---------+------------------------------------------------+
+; HEX_0          ; 1000000 ; Unsigned Binary                                ;
+; HEX_1          ; 1111001 ; Unsigned Binary                                ;
+; HEX_2          ; 0100100 ; Unsigned Binary                                ;
+; HEX_3          ; 0110000 ; Unsigned Binary                                ;
+; HEX_4          ; 0011001 ; Unsigned Binary                                ;
+; HEX_5          ; 0010010 ; Unsigned Binary                                ;
+; HEX_6          ; 0000010 ; Unsigned Binary                                ;
+; HEX_7          ; 1111000 ; Unsigned Binary                                ;
+; HEX_8          ; 0000000 ; Unsigned Binary                                ;
+; HEX_9          ; 0011000 ; Unsigned Binary                                ;
+; HEX_10         ; 0001000 ; Unsigned Binary                                ;
+; HEX_11         ; 0000011 ; Unsigned Binary                                ;
+; HEX_12         ; 1000110 ; Unsigned Binary                                ;
+; HEX_13         ; 0100001 ; Unsigned Binary                                ;
+; HEX_14         ; 0000110 ; Unsigned Binary                                ;
+; HEX_15         ; 0001110 ; Unsigned Binary                                ;
+; OFF            ; 1111111 ; Unsigned Binary                                ;
++----------------+---------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mem_wrapper:iRemember|rom:memory|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+---------------------------------------------------+
+; Parameter Name                     ; Value                ; Type                                              ;
++------------------------------------+----------------------+---------------------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                                           ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                                        ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                                      ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                                      ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                                    ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                                           ;
+; OPERATION_MODE                     ; ROM                  ; Untyped                                           ;
+; WIDTH_A                            ; 64                   ; Signed Integer                                    ;
+; WIDTHAD_A                          ; 4                    ; Signed Integer                                    ;
+; NUMWORDS_A                         ; 9                    ; Signed Integer                                    ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                                           ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                           ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                           ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                           ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                                           ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                           ;
+; WIDTH_B                            ; 1                    ; Untyped                                           ;
+; WIDTHAD_B                          ; 1                    ; Untyped                                           ;
+; NUMWORDS_B                         ; 1                    ; Untyped                                           ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                                           ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                           ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                           ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                                           ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                                           ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                                           ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                                           ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                                           ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                                           ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                                           ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                                           ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                                           ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                                    ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                                           ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                                           ;
+; BYTE_SIZE                          ; 8                    ; Untyped                                           ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                                           ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                           ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                           ;
+; INIT_FILE                          ; input_mem.mif        ; Untyped                                           ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                           ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                                           ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                                           ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                                           ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                                           ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                                           ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                                           ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                                           ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                                           ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                           ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                                           ;
+; DEVICE_FAMILY                      ; Cyclone V            ; Untyped                                           ;
+; CBXI_PARAMETER                     ; altsyncram_tdg1      ; Untyped                                           ;
++------------------------------------+----------------------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mat_vec_mult:iMAC ;
++----------------+-------+---------------------------------------+
+; Parameter Name ; Value ; Type                                  ;
++----------------+-------+---------------------------------------+
+; DEPTH          ; 8     ; Signed Integer                        ;
+; DATA_WIDTH     ; 8     ; Signed Integer                        ;
++----------------+-------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mat_vec_mult:iMAC|FIFO:b_vec ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; DEPTH          ; 8     ; Signed Integer                                   ;
+; DATA_WIDTH     ; 8     ; Signed Integer                                   ;
++----------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mat_vec_mult:iMAC|FIFO:hw[0].a_mat ;
++----------------+-------+--------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                   ;
++----------------+-------+--------------------------------------------------------+
+; DEPTH          ; 8     ; Signed Integer                                         ;
+; DATA_WIDTH     ; 8     ; Signed Integer                                         ;
++----------------+-------+--------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mat_vec_mult:iMAC|MAC:hw[0].mat_arr ;
++----------------+-------+---------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                    ;
++----------------+-------+---------------------------------------------------------+
+; DATA_WIDTH     ; 8     ; Signed Integer                                          ;
++----------------+-------+---------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mat_vec_mult:iMAC|FIFO:hw[1].a_mat ;
++----------------+-------+--------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                   ;
++----------------+-------+--------------------------------------------------------+
+; DEPTH          ; 8     ; Signed Integer                                         ;
+; DATA_WIDTH     ; 8     ; Signed Integer                                         ;
++----------------+-------+--------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mat_vec_mult:iMAC|MAC:hw[1].mat_arr ;
++----------------+-------+---------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                    ;
++----------------+-------+---------------------------------------------------------+
+; DATA_WIDTH     ; 8     ; Signed Integer                                          ;
++----------------+-------+---------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mat_vec_mult:iMAC|FIFO:hw[2].a_mat ;
++----------------+-------+--------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                   ;
++----------------+-------+--------------------------------------------------------+
+; DEPTH          ; 8     ; Signed Integer                                         ;
+; DATA_WIDTH     ; 8     ; Signed Integer                                         ;
++----------------+-------+--------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mat_vec_mult:iMAC|MAC:hw[2].mat_arr ;
++----------------+-------+---------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                    ;
++----------------+-------+---------------------------------------------------------+
+; DATA_WIDTH     ; 8     ; Signed Integer                                          ;
++----------------+-------+---------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mat_vec_mult:iMAC|FIFO:hw[3].a_mat ;
++----------------+-------+--------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                   ;
++----------------+-------+--------------------------------------------------------+
+; DEPTH          ; 8     ; Signed Integer                                         ;
+; DATA_WIDTH     ; 8     ; Signed Integer                                         ;
++----------------+-------+--------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mat_vec_mult:iMAC|MAC:hw[3].mat_arr ;
++----------------+-------+---------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                    ;
++----------------+-------+---------------------------------------------------------+
+; DATA_WIDTH     ; 8     ; Signed Integer                                          ;
++----------------+-------+---------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mat_vec_mult:iMAC|FIFO:hw[4].a_mat ;
++----------------+-------+--------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                   ;
++----------------+-------+--------------------------------------------------------+
+; DEPTH          ; 8     ; Signed Integer                                         ;
+; DATA_WIDTH     ; 8     ; Signed Integer                                         ;
++----------------+-------+--------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mat_vec_mult:iMAC|MAC:hw[4].mat_arr ;
++----------------+-------+---------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                    ;
++----------------+-------+---------------------------------------------------------+
+; DATA_WIDTH     ; 8     ; Signed Integer                                          ;
++----------------+-------+---------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mat_vec_mult:iMAC|FIFO:hw[5].a_mat ;
++----------------+-------+--------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                   ;
++----------------+-------+--------------------------------------------------------+
+; DEPTH          ; 8     ; Signed Integer                                         ;
+; DATA_WIDTH     ; 8     ; Signed Integer                                         ;
++----------------+-------+--------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mat_vec_mult:iMAC|MAC:hw[5].mat_arr ;
++----------------+-------+---------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                    ;
++----------------+-------+---------------------------------------------------------+
+; DATA_WIDTH     ; 8     ; Signed Integer                                          ;
++----------------+-------+---------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mat_vec_mult:iMAC|FIFO:hw[6].a_mat ;
++----------------+-------+--------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                   ;
++----------------+-------+--------------------------------------------------------+
+; DEPTH          ; 8     ; Signed Integer                                         ;
+; DATA_WIDTH     ; 8     ; Signed Integer                                         ;
++----------------+-------+--------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mat_vec_mult:iMAC|MAC:hw[6].mat_arr ;
++----------------+-------+---------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                    ;
++----------------+-------+---------------------------------------------------------+
+; DATA_WIDTH     ; 8     ; Signed Integer                                          ;
++----------------+-------+---------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mat_vec_mult:iMAC|FIFO:hw[7].a_mat ;
++----------------+-------+--------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                   ;
++----------------+-------+--------------------------------------------------------+
+; DEPTH          ; 8     ; Signed Integer                                         ;
+; DATA_WIDTH     ; 8     ; Signed Integer                                         ;
++----------------+-------+--------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mat_vec_mult:iMAC|MAC:hw[7].mat_arr ;
++----------------+-------+---------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                    ;
++----------------+-------+---------------------------------------------------------+
+; DATA_WIDTH     ; 8     ; Signed Integer                                          ;
++----------------+-------+---------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                                             ;
++-------------------------------------------+------------------------------------------------------------------+
+; Name                                      ; Value                                                            ;
++-------------------------------------------+------------------------------------------------------------------+
+; Number of entity instances                ; 1                                                                ;
+; Entity Instance                           ; mem_wrapper:iRemember|rom:memory|altsyncram:altsyncram_component ;
+;     -- OPERATION_MODE                     ; ROM                                                              ;
+;     -- WIDTH_A                            ; 64                                                               ;
+;     -- NUMWORDS_A                         ; 9                                                                ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                     ;
+;     -- WIDTH_B                            ; 1                                                                ;
+;     -- NUMWORDS_B                         ; 1                                                                ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                                           ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                     ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                             ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                        ;
++-------------------------------------------+------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mat_vec_mult:iMAC|FIFO:hw[5].a_mat"                                                  ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                             ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; full  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; empty ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mat_vec_mult:iMAC|FIFO:hw[4].a_mat"                                                  ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                             ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; full  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; empty ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mat_vec_mult:iMAC|FIFO:hw[3].a_mat"                                                  ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                             ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; full  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; empty ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mat_vec_mult:iMAC|FIFO:hw[2].a_mat"                                                  ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                             ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; full  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; empty ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mat_vec_mult:iMAC|FIFO:hw[1].a_mat"                                                  ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                             ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; full  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; empty ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------+
+; Port Connectivity Checks: "mat_vec_mult:iMAC|MAC:hw[0].mat_arr" ;
++------+-------+----------+---------------------------------------+
+; Port ; Type  ; Severity ; Details                               ;
++------+-------+----------+---------------------------------------+
+; Bin  ; Input ; Info     ; Stuck at GND                          ;
++------+-------+----------+---------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mat_vec_mult:iMAC|FIFO:hw[0].a_mat"                                                  ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                             ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; full  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; empty ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mem_wrapper:iRemember|rom:memory"                                                                                                                                                  ;
++---------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                                                                          ;
++---------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; address ; Input ; Warning  ; Input port expression (5 bits) is wider than the input port (4 bits) it drives.  The 1 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++---------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------+
+; Port Connectivity Checks: "mem_wrapper:iRemember" ;
++----------------+-------+----------+---------------+
+; Port           ; Type  ; Severity ; Details       ;
++----------------+-------+----------+---------------+
+; address[31..4] ; Input ; Info     ; Stuck at GND  ;
++----------------+-------+----------+---------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 1060                        ;
+;     CLR               ; 87                          ;
+;     CLR SCLR          ; 8                           ;
+;     ENA               ; 4                           ;
+;     ENA CLR           ; 768                         ;
+;     ENA CLR SCLR      ; 192                         ;
+;     SCLR              ; 1                           ;
+; arriav_lcell_comb     ; 530                         ;
+;     normal            ; 530                         ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 13                          ;
+;         3 data inputs ; 94                          ;
+;         4 data inputs ; 24                          ;
+;         5 data inputs ; 59                          ;
+;         6 data inputs ; 338                         ;
+; arriav_mac            ; 8                           ;
+; boundary_port         ; 70                          ;
+; stratixv_ram_block    ; 64                          ;
+;                       ;                             ;
+; Max LUT depth         ; 3.00                        ;
+; Average LUT depth     ; 1.65                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
+    Info: Processing started: Fri Feb  6 00:45:42 2026
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off minilab1b -c minilab1b
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file minilab1b.sv
+    Info (12023): Found entity 1: minilab1b File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file mac.sv
+    Info (12023): Found entity 1: MAC File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/mac.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file fifo.sv
+    Info (12023): Found entity 1: FIFO File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/fifo.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file rom.v
+    Info (12023): Found entity 1: rom File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/rom.v Line: 40
+Info (12021): Found 1 design units, including 1 entities, in source file mat_vec_mult.sv
+    Info (12023): Found entity 1: mat_vec_mult File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/mat_vec_mult.sv Line: 6
+Info (12021): Found 1 design units, including 1 entities, in source file memory.v
+    Info (12023): Found entity 1: mem_wrapper File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/memory.v Line: 2
+Info (12127): Elaborating entity "minilab1b" for the top level hierarchy
+Info (12128): Elaborating entity "mem_wrapper" for hierarchy "mem_wrapper:iRemember" File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b.sv Line: 88
+Warning (10230): Verilog HDL assignment warning at memory.v(44): truncated value with size 32 to match size of target (5) File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/memory.v Line: 44
+Warning (10230): Verilog HDL assignment warning at memory.v(52): truncated value with size 32 to match size of target (4) File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/memory.v Line: 52
+Info (12128): Elaborating entity "rom" for hierarchy "mem_wrapper:iRemember|rom:memory" File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/memory.v Line: 28
+Info (12128): Elaborating entity "altsyncram" for hierarchy "mem_wrapper:iRemember|rom:memory|altsyncram:altsyncram_component" File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/rom.v Line: 82
+Info (12130): Elaborated megafunction instantiation "mem_wrapper:iRemember|rom:memory|altsyncram:altsyncram_component" File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/rom.v Line: 82
+Info (12133): Instantiated megafunction "mem_wrapper:iRemember|rom:memory|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/rom.v Line: 82
+    Info (12134): Parameter "address_aclr_a" = "NONE"
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "init_file" = "input_mem.mif"
+    Info (12134): Parameter "intended_device_family" = "Cyclone V"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+    Info (12134): Parameter "numwords_a" = "9"
+    Info (12134): Parameter "operation_mode" = "ROM"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "UNREGISTERED"
+    Info (12134): Parameter "widthad_a" = "4"
+    Info (12134): Parameter "width_a" = "64"
+    Info (12134): Parameter "width_byteena_a" = "1"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_tdg1.tdf
+    Info (12023): Found entity 1: altsyncram_tdg1 File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/db/altsyncram_tdg1.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_tdg1" for hierarchy "mem_wrapper:iRemember|rom:memory|altsyncram:altsyncram_component|altsyncram_tdg1:auto_generated" File: c:/altera_lite/25.1std/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+Info (12128): Elaborating entity "mat_vec_mult" for hierarchy "mat_vec_mult:iMAC" File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b.sv Line: 100
+Info (10041): Inferred latch for "shift_reg[0][0]" at mat_vec_mult.sv(108) File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/mat_vec_mult.sv Line: 108
+Info (10041): Inferred latch for "shift_reg[0][1]" at mat_vec_mult.sv(108) File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/mat_vec_mult.sv Line: 108
+Info (10041): Inferred latch for "shift_reg[0][2]" at mat_vec_mult.sv(108) File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/mat_vec_mult.sv Line: 108
+Info (10041): Inferred latch for "shift_reg[0][3]" at mat_vec_mult.sv(108) File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/mat_vec_mult.sv Line: 108
+Info (10041): Inferred latch for "shift_reg[0][4]" at mat_vec_mult.sv(108) File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/mat_vec_mult.sv Line: 108
+Info (10041): Inferred latch for "shift_reg[0][5]" at mat_vec_mult.sv(108) File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/mat_vec_mult.sv Line: 108
+Info (10041): Inferred latch for "shift_reg[0][6]" at mat_vec_mult.sv(108) File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/mat_vec_mult.sv Line: 108
+Info (10041): Inferred latch for "shift_reg[0][7]" at mat_vec_mult.sv(108) File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/mat_vec_mult.sv Line: 108
+Info (12128): Elaborating entity "FIFO" for hierarchy "mat_vec_mult:iMAC|FIFO:b_vec" File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/mat_vec_mult.sv Line: 105
+Warning (10230): Verilog HDL assignment warning at fifo.sv(38): truncated value with size 32 to match size of target (3) File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/fifo.sv Line: 38
+Warning (10230): Verilog HDL assignment warning at fifo.sv(42): truncated value with size 32 to match size of target (3) File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/fifo.sv Line: 42
+Info (12128): Elaborating entity "MAC" for hierarchy "mat_vec_mult:iMAC|MAC:hw[0].mat_arr" File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/mat_vec_mult.sv Line: 141
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "LEDR[1]" is stuck at GND File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b.sv Line: 18
+    Warning (13410): Pin "LEDR[2]" is stuck at GND File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b.sv Line: 18
+    Warning (13410): Pin "LEDR[3]" is stuck at GND File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b.sv Line: 18
+    Warning (13410): Pin "LEDR[4]" is stuck at GND File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b.sv Line: 18
+    Warning (13410): Pin "LEDR[5]" is stuck at GND File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b.sv Line: 18
+    Warning (13410): Pin "LEDR[6]" is stuck at GND File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b.sv Line: 18
+    Warning (13410): Pin "LEDR[7]" is stuck at GND File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b.sv Line: 18
+    Warning (13410): Pin "LEDR[8]" is stuck at GND File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b.sv Line: 18
+    Warning (13410): Pin "LEDR[9]" is stuck at GND File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b.sv Line: 18
+Info (286030): Timing-Driven Synthesis is running
+Info (144001): Generated suppressed messages file C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/output_files/minilab1b.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 12 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "CLOCK2_50" File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b.sv Line: 4
+    Warning (15610): No output dependent on input pin "CLOCK3_50" File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b.sv Line: 5
+    Warning (15610): No output dependent on input pin "CLOCK4_50" File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b.sv Line: 6
+    Warning (15610): No output dependent on input pin "KEY[1]" File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b.sv Line: 21
+    Warning (15610): No output dependent on input pin "KEY[2]" File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b.sv Line: 21
+    Warning (15610): No output dependent on input pin "KEY[3]" File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b.sv Line: 21
+    Warning (15610): No output dependent on input pin "SW[4]" File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b.sv Line: 25
+    Warning (15610): No output dependent on input pin "SW[5]" File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b.sv Line: 25
+    Warning (15610): No output dependent on input pin "SW[6]" File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b.sv Line: 25
+    Warning (15610): No output dependent on input pin "SW[7]" File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b.sv Line: 25
+    Warning (15610): No output dependent on input pin "SW[8]" File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b.sv Line: 25
+    Warning (15610): No output dependent on input pin "SW[9]" File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b.sv Line: 25
+Info (21057): Implemented 1572 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 18 input pins
+    Info (21059): Implemented 52 output pins
+    Info (21061): Implemented 1430 logic cells
+    Info (21064): Implemented 64 RAM segments
+    Info (21062): Implemented 8 DSP elements
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 29 warnings
+    Info: Peak virtual memory: 4905 megabytes
+    Info: Processing ended: Fri Feb  6 00:45:53 2026
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:21
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/output_files/minilab1b.map.smsg.
+
+

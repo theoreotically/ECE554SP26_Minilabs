@@ -80,12 +80,12 @@ module mat_vec_mult #(
 
   //TODO: check this if it should staart at 8'b0 or 8'b1
   always @(posedge clk, negedge rst_n) begin
-    if (~rst_n) a_rden <= 17'h7ff00;
+    if (~rst_n) a_rden <= 17'h1ff00;
     else begin
       if (curr_state == WORKING) begin
         a_rden <= {1'b0,a_rden[16:1]};
       end else if (curr_state == IDLE) begin
-        a_rden <= 17'h7ff00;
+        a_rden <= 17'h1ff00;
       end
     end
   end
@@ -119,7 +119,7 @@ module mat_vec_mult #(
 
   genvar i;
   generate
-    for (i = 0; i < 8; i = i + 1) begin
+    for (i = 0; i < 8; i = i + 1) begin: hw
       FIFO a_mat (
           .clk(clk),
           .rst_n(rst_n),
@@ -130,10 +130,6 @@ module mat_vec_mult #(
           .full(a_full[i]),
           .empty(a_empty[i])
       );
-    end
-  endgenerate
-  generate
-    for (i = 0; i < 8; i = i + 1)begin
       MAC mat_arr (
           .clk(clk),
           .rst_n(rst_n),
@@ -143,7 +139,7 @@ module mat_vec_mult #(
           .Bin(shift_reg[7-i]),
           .Cout(out[i])
       );
-    end
+      end
   endgenerate
 
 endmodule
