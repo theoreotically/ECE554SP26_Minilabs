@@ -112,8 +112,8 @@ module mat_vec_mult #(
       end
     end  //once it starts, start shifting in the values from the b_vec fifo
     else if (curr_state==WORKING)begin
-      shift_reg[0] <= b_fifo_out;
-      for (int i = 1; i < 8; i = i + 1) shift_reg[i] <= shift_reg[i-1];
+      shift_reg[7] <= b_fifo_out;
+      for (int i = 6; i > 0; i = i - 1) shift_reg[i] <= shift_reg[i+1];
     end
   end
 

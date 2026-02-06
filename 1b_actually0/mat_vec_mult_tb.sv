@@ -86,16 +86,26 @@ mat_vec_mult iDUT (
 
     load_fifo_a(val_a);
     load_fifo_a(val_a);
+    for (integer i = 0; i < 8; i = i + 1) begin
+      val_a[i] = 8'd0;
+    end
     load_fifo_a(val_a);
     load_fifo_a(val_a);
+    for (integer i = 0; i < 8; i = i + 1) begin
+      val_a[i] = 8'd16;
+    end
+
     load_fifo_a(val_a);
     load_fifo_a(val_a);
     load_fifo_a(val_a);
     load_fifo_a(val_a);
 
     load_fifo_b(val_b);
+    val_b=8'd2;
     load_fifo_b(val_b);
+    val_b=8'd5;
     load_fifo_b(val_b);
+    val_b=8'd3;
     load_fifo_b(val_b);
     load_fifo_b(val_b);
     load_fifo_b(val_b);
