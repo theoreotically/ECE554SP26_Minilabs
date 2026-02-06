@@ -119,7 +119,7 @@ module mat_vec_mult #(
 
   genvar i;
   generate
-    for (i = 0; i < 8; i = i + 1) begin
+    for (i = 0; i < 8; i = i + 1) begin: hw
       FIFO a_mat (
           .clk(clk),
           .rst_n(rst_n),
@@ -130,10 +130,6 @@ module mat_vec_mult #(
           .full(a_full[i]),
           .empty(a_empty[i])
       );
-    end
-  endgenerate
-  generate
-    for (i = 0; i < 8; i = i + 1)begin
       MAC mat_arr (
           .clk(clk),
           .rst_n(rst_n),
@@ -143,7 +139,7 @@ module mat_vec_mult #(
           .Bin(shift_reg[i]),
           .Cout(out[i])
       );
-    end
+      end
   endgenerate
 
 endmodule

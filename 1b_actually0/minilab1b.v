@@ -43,7 +43,7 @@ wire [31:0] address;
 wire mem_rd_en;
 reg done;
 reg inc;
-reg state;
+reg state, nxt_state;
 reg [3:0] mem_rd_count;
 reg [63:0] data_line;
 reg readdatavalid, waitrequest;
@@ -91,7 +91,7 @@ mat_vec_mult #(.DEPTH(DEPTH), .DATA_WIDTH(DATA_WIDTH)) iMAC(
 	.b_wren(b_wren),
 	.a_fifo_in(data_line),
 	.b_fifo_in(data_line),
-	.out(out)
+	.out(out),
 	.done(done)
 );
 
@@ -102,39 +102,41 @@ assign rst_n = KEY[0];
 assign mem_rd_en = nxt_state == READ_MEM;
 assign address = {28'b0, mem_rd_count};
 
-always_comb begin
+always @(*) begin
 	case(state)
-	READ_MEM:
-	begin
-		macout <= {(DATA_WIDTH*3){1'b0}};
-		inc = 1'b0;
-		if (readdatavalid && mem_rd_count == 4'd8)
-			b_wren = 1'b1;
-			inc = 1'b1;
-		else if(readdatavalid)
-			a_wren = 1'b1;
-			inc = 1'b1;
-		else if (mem_rd_count == 4'd9)
-			nxt_state <= DONE;
-	end
+		READ_MEM:
+		begin
+			macout <= {(DATA_WIDTH*3){1'b0}};
+			inc <= 1'b0;
+			if (readdatavalid && mem_rd_count == 4'd8) begin
+				b_wren = 1'b1;
+				inc <= 1'b1;
+			end
+			else if(readdatavalid) begin
+				a_wren = 1'b1;
+				inc <= 1'b1;
+			end
+			else if (mem_rd_count == 4'd9)
+				nxt_state <= DONE;
+		end
 
-	DONE:
-	begin
-		inc = 1'b0;
-		macout <= out;
-	end
-		
+		DONE:
+		begin
+			inc <= 1'b0;
+			macout <= out;
+		end
+	endcase;
 end
 
 
-always_ff @(posedge CLOCK_50, negedge rst_n) begin
+always @(posedge CLOCK_50, negedge rst_n) begin
 	if (!rst_n) 
 		state <= READ_MEM;
 	else 
 		state <= nxt_state;
 end
 
-always_ff @(posedge CLOCK_50, negedge rst_n) begin
+always @(posedge CLOCK_50, negedge rst_n) begin
 	if (!rst_n) 
 		mem_rd_count <= 4'b0;
 	else if(inc)
