@@ -1,4 +1,11 @@
-C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/mat_vec_mult.sv {1 {vlog -work work -sv -stats=none C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/mat_vec_mult.sv
+C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b_tb.sv {1 {vlog -work work -sv -stats=none {C:\Users\jnoro\AppData\Local\quartus\ECE554SP26_Minilab1\1b_actually0\minilab1b_tb.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module minilab1b_tb
+
+Top level modules:
+	minilab1b_tb
+
+} {} {}} C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/mat_vec_mult.sv {1 {vlog -work work -sv -stats=none C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/mat_vec_mult.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module mat_vec_mult
 
@@ -33,12 +40,12 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	mem_wrapper
 
-} {} {}} C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b.sv {1 {vlog -work work -sv -stats=none C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b.sv
+} {} {}} C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/mat_vec_mult_t.sv {1 {vlog -work work -sv -stats=none C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/mat_vec_mult_t.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module minilab1b
+-- Compiling module mat_vec_mult_t
 
 Top level modules:
-	minilab1b
+	mat_vec_mult_t
 
 } {} {}} C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/rom.v {1 {vlog -work work -stats=none C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/rom.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020

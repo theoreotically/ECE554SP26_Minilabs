@@ -39,18 +39,24 @@ wire rst_n;
 logic Clr;
 logic [DATA_WIDTH-1:0] a_fifo_in[DATA_WIDTH-1:0];
 logic [DATA_WIDTH-1:0] b_fifo_in[DATA_WIDTH-1:0];
-logic [DATA_WIDTH-1:0] b_in;
+logic [DATA_WIDTH-1:0] a_in, b_in;
 wire [DATA_WIDTH*3-1:0] out[DATA_WIDTH-1:0];
 wire [31:0] address;
 wire mem_rd_en;
 wire done_wire;
 wire [2:0] display;
+wire [9:0] wren_wire;
 
-reg a_wren, b_wren;
+logic [7:0] a_ff, a_ff1;
+
+reg [7:0] a_in_SM;
+reg b_wren;
 reg done;
-reg inc, inc_b;
+reg inc, inc_b, rst_b;
 reg [1:0] state, nxt_state;
 reg [3:0] mem_rd_count, b_count;
+reg [9:0] wren;
+reg [3:0] wren_counter;
 wire [63:0] data_line;
 
 wire readdatavalid, waitrequest;
@@ -90,13 +96,13 @@ mem_wrapper iRemember(
 	.waitrequest(waitrequest)
 );	
 
-mat_vec_mult #(.DEPTH(DEPTH), .DATA_WIDTH(DATA_WIDTH)) iMAC(
+mat_vec_mult_t #(.DEPTH(DEPTH), .DATA_WIDTH(DATA_WIDTH)) iMAC(
 	.clk(CLOCK_50),
 	.rst_n(rst_n),
 	.Clr(Clr),
-	.a_wren(a_wren),
+	.a_wren(wren_wire[9:2]),
 	.b_wren(b_wren),
-	.a_fifo_in(a_fifo_in),
+	.a_fifo_in(a_in),
 	.b_fifo_in(b_in),
 	.out(out),
 	.done(done_wire)
@@ -128,6 +134,8 @@ assign a_fifo_in[2] = data_line[47:40];
 assign a_fifo_in[1] = data_line[55:48];
 assign a_fifo_in[0] = data_line[63:56];
 
+assign a_in = a_ff;
+
 assign b_fifo_in[7] = data_line[ 7: 0];
 assign b_fifo_in[6] = data_line[15: 8];
 assign b_fifo_in[5] = data_line[23:16];
@@ -136,6 +144,8 @@ assign b_fifo_in[3] = data_line[39:32];
 assign b_fifo_in[2] = data_line[47:40];
 assign b_fifo_in[1] = data_line[55:48];
 assign b_fifo_in[0] = data_line[63:56];
+
+assign wren_wire = wren & {10{!wren_counter[3]}};
 
 // assign b_fifo_in[0] = data_line[ 7: 0];
 // assign b_fifo_in[1] = data_line[15: 8];
@@ -151,24 +161,42 @@ always @(*) begin
 		READ_MEM_A:
 		begin
 			macout <= {(DATA_WIDTH*3){1'b0}};
-			a_wren <= 1'b0;
 			b_wren <= 1'b0;
 			inc <= 1'b0;
 			inc_b <= 1'b0;
+			rst_b <= 1'b0;
 			Clr <= 1'b0;
 
 			done <= 1'b0;
 			nxt_state <= READ_MEM_A;
 			
-			if (readdatavalid && mem_rd_count == 4'd9)
+			// change state to read B
+			if (readdatavalid && mem_rd_count == 4'd9) begin
+				rst_b <= 1'b1;
 				nxt_state <= READ_MEM_B;
-			else if(readdatavalid && mem_rd_count != 4'd0) begin
-				a_wren <= 1'b1;
-				inc <= 1'b1;
 			end
+			// reset b if too large
+			else if (b_count == 4'd9)
+				rst_b <= 1'b1;
+			
+			// write to each fifo
+			else if(readdatavalid && mem_rd_count != 4'd0) begin
+				a_in_SM <= a_fifo_in[b_count];
+				inc <= 1'b1;
+				inc_b <= 1'b1;
+			end
+
+			else if (b_count != 4'd0 && mem_rd_count != 4'd0) begin
+				a_in_SM <= a_fifo_in[b_count];
+				inc_b <= 1'b1;
+			end
+
+			// inc only, do not write
 			else if(readdatavalid && mem_rd_count == 4'd0) begin
 				inc <= 1'b1;
 			end
+
+			// reset
 			else if (waitrequest && mem_rd_count == 4'd0)
 				Clr <= 1'b1;
 		end
@@ -176,10 +204,10 @@ always @(*) begin
 		READ_MEM_B:
 		begin
 			macout <= {(DATA_WIDTH*3){1'b0}};
-			a_wren <= 1'b0;
 			b_wren <= 1'b1;
 			inc <= 1'b0;
 			inc_b <= 1'b1;
+			rst_b <= 1'b0;
 			Clr <= 1'b0;
 
 			b_in <= b_fifo_in[b_count];
@@ -194,7 +222,6 @@ always @(*) begin
 		DONE:
 		begin
 			macout <= out[display];
-			a_wren <= 1'b0;
 			b_wren <= 1'b0;
 			inc <= 1'b0;
 			inc_b <= 1'b0;
@@ -222,10 +249,43 @@ always_ff @(posedge CLOCK_50, negedge rst_n) begin
 end
 
 always_ff @(posedge CLOCK_50, negedge rst_n) begin
+	if (!rst_n) begin
+		a_ff <= 8'b0;
+		a_ff1 <= 8'b0;
+	end
+		
+	else begin
+		a_ff <= a_in_SM;
+		a_ff1 <= a_ff;
+	end
+end
+
+always_ff @(posedge CLOCK_50, negedge rst_n) begin
+	if (!rst_n)
+		wren_counter <= 4'b0;
+	else if (!waitrequest)
+		wren_counter <= 4'b0;
+	else if (wren_counter == 4'd8)
+		wren_counter <= 4'd8;
+	else
+		wren_counter <= wren_counter + 1'b1;
+end
+
+always_ff @(posedge CLOCK_50, negedge rst_n) begin
+	if (!rst_n)
+		wren <= 10'b1;
+	else if (readdatavalid) begin
+		wren <= wren << 1;
+	end
+end
+
+always_ff @(posedge CLOCK_50, negedge rst_n) begin
 	if (!rst_n) 
 		b_count <= 4'b0;
 	else if(inc_b)
 		b_count <= b_count + 1'b1;
+	else if(rst_b)
+		b_count <= 4'b0;
 end
 
 

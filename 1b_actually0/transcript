@@ -2455,3 +2455,847 @@ run -all
 # ** Note: $stop    : C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b_tb.sv(64)
 #    Time: 1655 ps  Iteration: 1  Instance: /minilab1b_tb
 # Break in Module minilab1b_tb at C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b_tb.sv line 64
+# Compile of m2.sv failed with 5 errors.
+# Compile of minilab1b.sv failed with 1 errors.
+# 2 compiles, 2 failed with 6 errors.
+# Compile of m2.sv failed with 5 errors.
+# Compile of minilab1b.sv failed with 1 errors.
+# 2 compiles, 2 failed with 6 errors.
+# Compile of m2.sv failed with 5 errors.
+# Compile of minilab1b.sv failed with 1 errors.
+# 2 compiles, 2 failed with 6 errors.
+# Compile of m2.sv failed with 5 errors.
+# Compile of minilab1b.sv failed with 1 errors.
+# 2 compiles, 2 failed with 6 errors.
+# Compile of m2.sv failed with 5 errors.
+# Compile of minilab1b.sv failed with 1 errors.
+# Compile of mat_vec_mult_t.sv was successful.
+# 3 compiles, 2 failed with 6 errors.
+# Compile of m2.sv failed with 5 errors.
+# Compile of minilab1b.sv was successful.
+# 2 compiles, 1 failed with 5 errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.minilab1b
+# Loading work.mat_vec_mult_t
+# ** Warning: (vsim-3015) [PCDPC] - Port size (10) does not match connection size (1) for port 'LEDR'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b.sv(18).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b_tb.sv Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (5) for port 'address'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/rom.v(41).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT/iRemember/memory File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/memory.v Line: 25
+# ** Error (suppressible): (vsim-12027) Array connection type 'reg[7:0]$[7:0]' is incompatible with 'wire[7:0]' for  port (a_fifo_in):  Can't mix packed and unpacked types.
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT/iMAC File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b.sv Line: 94
+# Break key hit
+# Compile of m2.sv failed with 5 errors.
+vsim -L altera_mf_ver -L altera_mf work.minilab1b_tb
+# vsim -L altera_mf_ver -L altera_mf work.minilab1b_tb 
+# Start time: 11:47:20 on Feb 09,2026
+# Loading sv_std.std
+# Loading work.minilab1b_tb
+# Loading work.minilab1b
+# Loading work.mem_wrapper
+# Loading work.rom
+# Loading altera_mf_ver.altsyncram
+# Loading work.mat_vec_mult_t
+# Loading work.FIFO
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# Loading work.MAC
+# ** Warning: (vsim-3015) [PCDPC] - Port size (10) does not match connection size (1) for port 'LEDR'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b.sv(18).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b_tb.sv Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (5) for port 'address'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/rom.v(41).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT/iRemember/memory File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/memory.v Line: 25
+# ** Error (suppressible): (vsim-12027) Array connection type 'reg[7:0]$[7:0]' is incompatible with 'wire[7:0]' for  port (a_fifo_in):  Can't mix packed and unpacked types.
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT/iMAC File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b.sv Line: 94
+# Error loading design
+# End time: 15:08:23 on Feb 09,2026, Elapsed time: 3:21:03
+# Errors: 2, Warnings: 6
+# Compile of m2.sv failed with 5 errors.
+# Compile of minilab1b.sv was successful.
+# 2 compiles, 1 failed with 5 errors.
+vsim -L altera_mf_ver -L altera_mf work.minilab1b_tb
+# vsim -L altera_mf_ver -L altera_mf work.minilab1b_tb 
+# Start time: 15:12:15 on Feb 09,2026
+# Loading sv_std.std
+# Loading work.minilab1b_tb
+# Loading work.minilab1b
+# Loading work.mem_wrapper
+# Loading work.rom
+# Loading altera_mf_ver.altsyncram
+# Loading work.mat_vec_mult_t
+# Loading work.FIFO
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# Loading work.MAC
+# ** Warning: (vsim-3015) [PCDPC] - Port size (10) does not match connection size (1) for port 'LEDR'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b.sv(18).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b_tb.sv Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (5) for port 'address'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/rom.v(41).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT/iRemember/memory File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/memory.v Line: 25
+# ** Error (suppressible): (vsim-12027) Array connection type 'reg[7:0]$[7:0]' is incompatible with 'wire[7:0]' for  port (a_fifo_in):  Can't mix packed and unpacked types.
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT/iMAC File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b.sv Line: 94
+# Error loading design
+# End time: 15:12:16 on Feb 09,2026, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 4
+# Compile of m2.sv failed with 5 errors.
+# Compile of minilab1b.sv was successful.
+# 2 compiles, 1 failed with 5 errors.
+vsim -L altera_mf_ver -L altera_mf work.minilab1b_tb
+# vsim -L altera_mf_ver -L altera_mf work.minilab1b_tb 
+# Start time: 15:12:52 on Feb 09,2026
+# Loading sv_std.std
+# Loading work.minilab1b_tb
+# Loading work.minilab1b
+# Loading work.mem_wrapper
+# Loading work.rom
+# Loading altera_mf_ver.altsyncram
+# Loading work.mat_vec_mult_t
+# Loading work.FIFO
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# Loading work.MAC
+# ** Warning: (vsim-3015) [PCDPC] - Port size (10) does not match connection size (1) for port 'LEDR'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b.sv(18).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b_tb.sv Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (5) for port 'address'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/rom.v(41).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT/iRemember/memory File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/memory.v Line: 25
+run
+run
+run -all
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (10) does not match connection size (1) for port 'LEDR'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b.sv(18).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b_tb.sv Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (5) for port 'address'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/rom.v(41).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT/iRemember/memory File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/memory.v Line: 25
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Compile of m2.sv failed with 5 errors.
+# Compile of minilab1b.sv was successful.
+# 2 compiles, 1 failed with 5 errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.minilab1b
+# ** Warning: (vsim-3015) [PCDPC] - Port size (10) does not match connection size (1) for port 'LEDR'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b.sv(18).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b_tb.sv Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (5) for port 'address'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/rom.v(41).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT/iRemember/memory File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/memory.v Line: 25
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Compile of m2.sv failed with 5 errors.
+# Compile of minilab1b.sv was successful.
+# 2 compiles, 1 failed with 5 errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.minilab1b
+# ** Warning: (vsim-3015) [PCDPC] - Port size (10) does not match connection size (1) for port 'LEDR'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b.sv(18).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b_tb.sv Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (5) for port 'address'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/rom.v(41).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT/iRemember/memory File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/memory.v Line: 25
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Compile of m2.sv failed with 5 errors.
+# Compile of minilab1b.sv was successful.
+# 2 compiles, 1 failed with 5 errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.minilab1b
+# ** Warning: (vsim-3015) [PCDPC] - Port size (10) does not match connection size (1) for port 'LEDR'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b.sv(18).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b_tb.sv Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (5) for port 'address'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/rom.v(41).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT/iRemember/memory File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/memory.v Line: 25
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+run -all
+# Compile of m2.sv failed with 5 errors.
+# Compile of minilab1b.sv was successful.
+# 2 compiles, 1 failed with 5 errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.minilab1b
+# ** Warning: (vsim-3015) [PCDPC] - Port size (10) does not match connection size (1) for port 'LEDR'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b.sv(18).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b_tb.sv Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (5) for port 'address'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/rom.v(41).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT/iRemember/memory File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/memory.v Line: 25
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+restart
+# Compile of m2.sv failed with 5 errors.
+# Compile of minilab1b.sv was successful.
+# 2 compiles, 1 failed with 5 errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.minilab1b
+# ** Warning: (vsim-3015) [PCDPC] - Port size (10) does not match connection size (1) for port 'LEDR'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b.sv(18).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b_tb.sv Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (5) for port 'address'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/rom.v(41).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT/iRemember/memory File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/memory.v Line: 25
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Warning : Address pointed at port A is out of bound!
+# Time: 415  Instance: minilab1b_tb.iDUT.iRemember.memory.altsyncram_component.m_default.altsyncram_inst
+# Warning : Address pointed at port A is out of bound!
+# Time: 415  Instance: minilab1b_tb.iDUT.iRemember.memory.altsyncram_component.m_default.altsyncram_inst
+# Warning : Address pointed at port A is out of bound!
+# Time: 545  Instance: minilab1b_tb.iDUT.iRemember.memory.altsyncram_component.m_default.altsyncram_inst
+# Warning : Address pointed at port A is out of bound!
+# Time: 805  Instance: minilab1b_tb.iDUT.iRemember.memory.altsyncram_component.m_default.altsyncram_inst
+# Warning : Address pointed at port A is out of bound!
+# Time: 805  Instance: minilab1b_tb.iDUT.iRemember.memory.altsyncram_component.m_default.altsyncram_inst
+# Warning : Address pointed at port A is out of bound!
+# Time: 935  Instance: minilab1b_tb.iDUT.iRemember.memory.altsyncram_component.m_default.altsyncram_inst
+# Warning : Address pointed at port A is out of bound!
+# Time: 1195  Instance: minilab1b_tb.iDUT.iRemember.memory.altsyncram_component.m_default.altsyncram_inst
+# Warning : Address pointed at port A is out of bound!
+# Time: 1195  Instance: minilab1b_tb.iDUT.iRemember.memory.altsyncram_component.m_default.altsyncram_inst
+# Compile of m2.sv failed with 5 errors.
+# Compile of minilab1b.sv was successful.
+# 2 compiles, 1 failed with 5 errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.minilab1b
+# ** Warning: (vsim-3015) [PCDPC] - Port size (10) does not match connection size (1) for port 'LEDR'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b.sv(18).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b_tb.sv Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (5) for port 'address'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/rom.v(41).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT/iRemember/memory File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/memory.v Line: 25
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Compile of m2.sv failed with 5 errors.
+# Compile of minilab1b.sv was successful.
+# 2 compiles, 1 failed with 5 errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.minilab1b
+# ** Warning: (vsim-3015) [PCDPC] - Port size (10) does not match connection size (1) for port 'LEDR'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b.sv(18).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b_tb.sv Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (5) for port 'address'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/rom.v(41).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT/iRemember/memory File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/memory.v Line: 25
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+run
+# Display error! Expected:     4812 . Actual    59748
+# ** Note: $stop    : C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b_tb.sv(59)
+#    Time: 1585 ps  Iteration: 1  Instance: /minilab1b_tb
+# Break in Module minilab1b_tb at C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b_tb.sv line 59
+# Compile of m2.sv failed with 5 errors.
+# Compile of minilab1b.sv was successful.
+# 2 compiles, 1 failed with 5 errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.minilab1b
+# ** Warning: (vsim-3015) [PCDPC] - Port size (10) does not match connection size (1) for port 'LEDR'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b.sv(18).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b_tb.sv Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (5) for port 'address'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/rom.v(41).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT/iRemember/memory File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/memory.v Line: 25
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+run
+# Display error! Expected:     4812 . Actual    67168
+# ** Note: $stop    : C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b_tb.sv(59)
+#    Time: 1585 ps  Iteration: 1  Instance: /minilab1b_tb
+# Break in Module minilab1b_tb at C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b_tb.sv line 59
+# Compile of m2.sv failed with 5 errors.
+# Compile of minilab1b.sv was successful.
+# 2 compiles, 1 failed with 5 errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.minilab1b
+# ** Warning: (vsim-3015) [PCDPC] - Port size (10) does not match connection size (1) for port 'LEDR'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b.sv(18).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b_tb.sv Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (5) for port 'address'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/rom.v(41).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT/iRemember/memory File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/memory.v Line: 25
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+run
+# Display error! Expected:     4812 . Actual        0
+# ** Note: $stop    : C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b_tb.sv(59)
+#    Time: 1585 ps  Iteration: 1  Instance: /minilab1b_tb
+# Break in Module minilab1b_tb at C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b_tb.sv line 59
+# Compile of m2.sv failed with 5 errors.
+# Compile of minilab1b.sv was successful.
+# 2 compiles, 1 failed with 5 errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.minilab1b
+# ** Warning: (vsim-3015) [PCDPC] - Port size (10) does not match connection size (1) for port 'LEDR'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b.sv(18).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b_tb.sv Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (5) for port 'address'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/rom.v(41).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT/iRemember/memory File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/memory.v Line: 25
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+run
+# Compile of m2.sv failed with 5 errors.
+# Compile of minilab1b.sv was successful.
+# 2 compiles, 1 failed with 5 errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.minilab1b
+# ** Warning: (vsim-3015) [PCDPC] - Port size (10) does not match connection size (1) for port 'LEDR'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b.sv(18).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b_tb.sv Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (5) for port 'address'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/rom.v(41).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT/iRemember/memory File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/memory.v Line: 25
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Compile of m2.sv failed with 5 errors.
+# Compile of minilab1b.sv was successful.
+# 2 compiles, 1 failed with 5 errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.minilab1b
+# ** Warning: (vsim-3015) [PCDPC] - Port size (10) does not match connection size (1) for port 'LEDR'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b.sv(18).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b_tb.sv Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (5) for port 'address'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/rom.v(41).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT/iRemember/memory File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/memory.v Line: 25
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Compile of m2.sv failed with 5 errors.
+# Compile of minilab1b.sv was successful.
+# 2 compiles, 1 failed with 5 errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.minilab1b
+# ** Warning: (vsim-3015) [PCDPC] - Port size (10) does not match connection size (1) for port 'LEDR'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b.sv(18).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b_tb.sv Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (5) for port 'address'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/rom.v(41).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT/iRemember/memory File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/memory.v Line: 25
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Compile of m2.sv failed with 5 errors.
+# Compile of minilab1b.sv was successful.
+# 2 compiles, 1 failed with 5 errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.minilab1b
+# ** Warning: (vsim-3015) [PCDPC] - Port size (10) does not match connection size (1) for port 'LEDR'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b.sv(18).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b_tb.sv Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (5) for port 'address'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/rom.v(41).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT/iRemember/memory File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/memory.v Line: 25
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (10) does not match connection size (1) for port 'LEDR'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b.sv(18).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b_tb.sv Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (5) for port 'address'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/rom.v(41).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT/iRemember/memory File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/memory.v Line: 25
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Compile of m2.sv failed with 5 errors.
+# Compile of minilab1b.sv was successful.
+# 2 compiles, 1 failed with 5 errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.minilab1b
+# ** Warning: (vsim-3015) [PCDPC] - Port size (10) does not match connection size (1) for port 'LEDR'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b.sv(18).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b_tb.sv Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (5) for port 'address'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/rom.v(41).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT/iRemember/memory File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/memory.v Line: 25
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Compile of m2.sv failed with 5 errors.
+# Compile of minilab1b.sv was successful.
+# 2 compiles, 1 failed with 5 errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.minilab1b
+# ** Warning: (vsim-3015) [PCDPC] - Port size (10) does not match connection size (1) for port 'LEDR'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b.sv(18).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b_tb.sv Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (5) for port 'address'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/rom.v(41).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT/iRemember/memory File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/memory.v Line: 25
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Compile of m2.sv failed with 5 errors.
+# Compile of minilab1b.sv was successful.
+# 2 compiles, 1 failed with 5 errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.minilab1b
+# ** Warning: (vsim-3015) [PCDPC] - Port size (10) does not match connection size (1) for port 'LEDR'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b.sv(18).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b_tb.sv Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (5) for port 'address'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/rom.v(41).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT/iRemember/memory File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/memory.v Line: 25
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Compile of m2.sv failed with 5 errors.
+# Compile of minilab1b.sv was successful.
+# 2 compiles, 1 failed with 5 errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.minilab1b
+# ** Warning: (vsim-3015) [PCDPC] - Port size (10) does not match connection size (1) for port 'LEDR'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b.sv(18).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b_tb.sv Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (5) for port 'address'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/rom.v(41).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT/iRemember/memory File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/memory.v Line: 25
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+add wave -position insertpoint  \
+sim:/minilab1b_tb/iDUT/wren
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (10) does not match connection size (1) for port 'LEDR'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b.sv(18).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b_tb.sv Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (5) for port 'address'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/rom.v(41).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT/iRemember/memory File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/memory.v Line: 25
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Compile of m2.sv failed with 5 errors.
+# Compile of minilab1b.sv was successful.
+# 2 compiles, 1 failed with 5 errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.minilab1b
+# ** Warning: (vsim-3015) [PCDPC] - Port size (10) does not match connection size (1) for port 'LEDR'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b.sv(18).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b_tb.sv Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (5) for port 'address'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/rom.v(41).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT/iRemember/memory File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/memory.v Line: 25
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Compile of m2.sv failed with 5 errors.
+# Compile of minilab1b.sv was successful.
+# 2 compiles, 1 failed with 5 errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.minilab1b
+# ** Warning: (vsim-3015) [PCDPC] - Port size (10) does not match connection size (1) for port 'LEDR'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b.sv(18).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b_tb.sv Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (5) for port 'address'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/rom.v(41).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT/iRemember/memory File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/memory.v Line: 25
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Compile of m2.sv failed with 5 errors.
+# Compile of minilab1b.sv was successful.
+# 2 compiles, 1 failed with 5 errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.minilab1b
+# ** Warning: (vsim-3015) [PCDPC] - Port size (10) does not match connection size (1) for port 'LEDR'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b.sv(18).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b_tb.sv Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (5) for port 'address'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/rom.v(41).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT/iRemember/memory File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/memory.v Line: 25
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Compile of m2.sv failed with 5 errors.
+# Compile of minilab1b.sv was successful.
+# 2 compiles, 1 failed with 5 errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.minilab1b
+# ** Warning: (vsim-3015) [PCDPC] - Port size (10) does not match connection size (1) for port 'LEDR'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b.sv(18).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b_tb.sv Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (5) for port 'address'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/rom.v(41).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT/iRemember/memory File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/memory.v Line: 25
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Compile of m2.sv failed with 5 errors.
+# Compile of minilab1b.sv was successful.
+# 2 compiles, 1 failed with 5 errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.minilab1b
+# ** Warning: (vsim-3015) [PCDPC] - Port size (10) does not match connection size (1) for port 'LEDR'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b.sv(18).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b_tb.sv Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (5) for port 'address'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/rom.v(41).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT/iRemember/memory File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/memory.v Line: 25
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Compile of m2.sv failed with 5 errors.
+# Compile of minilab1b.sv was successful.
+# 2 compiles, 1 failed with 5 errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.minilab1b
+# ** Warning: (vsim-3015) [PCDPC] - Port size (10) does not match connection size (1) for port 'LEDR'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b.sv(18).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b_tb.sv Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (5) for port 'address'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/rom.v(41).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT/iRemember/memory File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/memory.v Line: 25
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Compile of m2.sv failed with 5 errors.
+# Compile of minilab1b.sv was successful with warnings.
+# 2 compiles, 1 failed with 5 errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.minilab1b
+# ** Warning: (vsim-3015) [PCDPC] - Port size (10) does not match connection size (1) for port 'LEDR'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b.sv(18).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b_tb.sv Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (5) for port 'address'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/rom.v(41).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT/iRemember/memory File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/memory.v Line: 25
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (9) for port 'a_wren'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/mat_vec_mult_t.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT/iMAC File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b.sv Line: 95
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+run
+quit -sim
+# End time: 16:43:10 on Feb 09,2026, Elapsed time: 1:30:18
+# Errors: 0, Warnings: 4
+vsim -L altera_mf_ver -L altera_mf work.minilab1b_tb
+# vsim -L altera_mf_ver -L altera_mf work.minilab1b_tb 
+# Start time: 16:43:28 on Feb 09,2026
+# Loading sv_std.std
+# Loading work.minilab1b_tb
+# Loading work.minilab1b
+# Loading work.mem_wrapper
+# Loading work.rom
+# Loading altera_mf_ver.altsyncram
+# Loading work.mat_vec_mult_t
+# Loading work.FIFO
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# Loading work.MAC
+# ** Warning: (vsim-3015) [PCDPC] - Port size (10) does not match connection size (1) for port 'LEDR'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b.sv(18).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b_tb.sv Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (5) for port 'address'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/rom.v(41).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT/iRemember/memory File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/memory.v Line: 25
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (9) for port 'a_wren'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/mat_vec_mult_t.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT/iMAC File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b.sv Line: 95
+add wave -position insertpoint sim:/minilab1b_tb/*
+add wave -position insertpoint sim:/minilab1b_tb/iDUT/*
+run -all
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (10) does not match connection size (1) for port 'LEDR'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b.sv(18).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b_tb.sv Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (5) for port 'address'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/rom.v(41).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT/iRemember/memory File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/memory.v Line: 25
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (9) for port 'a_wren'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/mat_vec_mult_t.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT/iMAC File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b.sv Line: 95
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+run
+# Compile of m2.sv failed with 5 errors.
+# Compile of minilab1b.sv was successful with warnings.
+# 2 compiles, 1 failed with 5 errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.minilab1b
+# ** Warning: (vsim-3015) [PCDPC] - Port size (10) does not match connection size (1) for port 'LEDR'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b.sv(18).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b_tb.sv Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (5) for port 'address'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/rom.v(41).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT/iRemember/memory File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/memory.v Line: 25
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (9) for port 'a_wren'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/mat_vec_mult_t.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT/iMAC File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b.sv Line: 95
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+run
+# Compile of m2.sv failed with 5 errors.
+# Compile of minilab1b.sv was successful with warnings.
+# 2 compiles, 1 failed with 5 errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.minilab1b
+# ** Warning: (vsim-3015) [PCDPC] - Port size (10) does not match connection size (1) for port 'LEDR'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b.sv(18).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b_tb.sv Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (5) for port 'address'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/rom.v(41).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT/iRemember/memory File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/memory.v Line: 25
+# ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (9) for port 'a_wren'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/mat_vec_mult_t.sv(16).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT/iMAC File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b.sv Line: 95
+# Compile of m2.sv failed with 5 errors.
+# Compile of minilab1b.sv was successful.
+# 2 compiles, 1 failed with 5 errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.minilab1b
+# ** Warning: (vsim-3015) [PCDPC] - Port size (10) does not match connection size (1) for port 'LEDR'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b.sv(18).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b_tb.sv Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (5) for port 'address'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/rom.v(41).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT/iRemember/memory File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/memory.v Line: 25
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (10) does not match connection size (1) for port 'LEDR'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b.sv(18).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b_tb.sv Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (5) for port 'address'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/rom.v(41).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT/iRemember/memory File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/memory.v Line: 25
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+run -continue
+run -all
+add wave -position insertpoint sim:/minilab1b_tb/iDUT/iMAC/*
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (10) does not match connection size (1) for port 'LEDR'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b.sv(18).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b_tb.sv Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (5) for port 'address'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/rom.v(41).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT/iRemember/memory File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/memory.v Line: 25
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+add wave -position insertpoint {sim:/minilab1b_tb/iDUT/iMAC/hw[7]/a_mat/*}
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (10) does not match connection size (1) for port 'LEDR'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b.sv(18).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b_tb.sv Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (5) for port 'address'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/rom.v(41).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT/iRemember/memory File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/memory.v Line: 25
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+add wave -position insertpoint {sim:/minilab1b_tb/iDUT/iMAC/hw[0]/a_mat/*}
+add wave -position insertpoint  \
+{sim:/minilab1b_tb/iDUT/iMAC/hw[0]/a_mat/array}
+add wave -position insertpoint  \
+{sim:/minilab1b_tb/iDUT/iMAC/hw[7]/a_mat/array}
+add wave -position insertpoint  \
+{sim:/minilab1b_tb/iDUT/iMAC/hw[6]/a_mat/array}
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (10) does not match connection size (1) for port 'LEDR'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b.sv(18).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b_tb.sv Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (5) for port 'address'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/rom.v(41).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT/iRemember/memory File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/memory.v Line: 25
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+run
+# Compile of m2.sv failed with 5 errors.
+# Compile of minilab1b.sv was successful.
+# 2 compiles, 1 failed with 5 errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.minilab1b
+# ** Warning: (vsim-3015) [PCDPC] - Port size (10) does not match connection size (1) for port 'LEDR'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b.sv(18).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b_tb.sv Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (5) for port 'address'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/rom.v(41).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT/iRemember/memory File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/memory.v Line: 25
+# Warning in wave window restart: (vish-4014) No objects found matching '/minilab1b_tb/iDUT/inc_wren'. 
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Compile of m2.sv failed with 5 errors.
+# Compile of minilab1b.sv was successful.
+# 2 compiles, 1 failed with 5 errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.minilab1b
+# ** Warning: (vsim-3015) [PCDPC] - Port size (10) does not match connection size (1) for port 'LEDR'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b.sv(18).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b_tb.sv Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (5) for port 'address'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/rom.v(41).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT/iRemember/memory File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/memory.v Line: 25
+# Warning in wave window restart: (vish-4014) No objects found matching '/minilab1b_tb/iDUT/a_wren'. 
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Compile of m2.sv failed with 5 errors.
+# Compile of minilab1b.sv was successful.
+# 2 compiles, 1 failed with 5 errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.minilab1b
+# ** Warning: (vsim-3015) [PCDPC] - Port size (10) does not match connection size (1) for port 'LEDR'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b.sv(18).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b_tb.sv Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (5) for port 'address'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/rom.v(41).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT/iRemember/memory File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/memory.v Line: 25
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+run -all
+# Display error! Expected:     4812 . Actual        x
+# ** Note: $stop    : C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b_tb.sv(59)
+#    Time: 1585 ps  Iteration: 1  Instance: /minilab1b_tb
+# Break in Module minilab1b_tb at C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b_tb.sv line 59
+# Compile of m2.sv failed with 5 errors.
+# Compile of minilab1b.sv was successful.
+# 2 compiles, 1 failed with 5 errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.minilab1b
+# ** Warning: (vsim-3015) [PCDPC] - Port size (10) does not match connection size (1) for port 'LEDR'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b.sv(18).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b_tb.sv Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (5) for port 'address'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/rom.v(41).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT/iRemember/memory File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/memory.v Line: 25
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Compile of m2.sv failed with 5 errors.
+# Compile of minilab1b.sv was successful.
+# 2 compiles, 1 failed with 5 errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.minilab1b
+# ** Warning: (vsim-3015) [PCDPC] - Port size (10) does not match connection size (1) for port 'LEDR'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b.sv(18).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b_tb.sv Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (5) for port 'address'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/rom.v(41).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT/iRemember/memory File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/memory.v Line: 25
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+run
+add wave -position insertpoint sim:/minilab1b_tb/*
+add wave -position insertpoint sim:/minilab1b_tb/iDUT/*
+# Compile of m2.sv failed with 5 errors.
+# Compile of minilab1b.sv was successful.
+# 2 compiles, 1 failed with 5 errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.minilab1b
+# ** Warning: (vsim-3015) [PCDPC] - Port size (10) does not match connection size (1) for port 'LEDR'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b.sv(18).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b_tb.sv Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (5) for port 'address'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/rom.v(41).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT/iRemember/memory File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/memory.v Line: 25
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Compile of m2.sv failed with 5 errors.
+# Compile of minilab1b.sv was successful.
+# 2 compiles, 1 failed with 5 errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.minilab1b
+# ** Warning: (vsim-3015) [PCDPC] - Port size (10) does not match connection size (1) for port 'LEDR'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b.sv(18).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b_tb.sv Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (5) for port 'address'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/rom.v(41).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT/iRemember/memory File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/memory.v Line: 25
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Compile of m2.sv failed with 5 errors.
+# Compile of minilab1b.sv was successful.
+# 2 compiles, 1 failed with 5 errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.minilab1b
+# ** Warning: (vsim-3015) [PCDPC] - Port size (10) does not match connection size (1) for port 'LEDR'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b.sv(18).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b_tb.sv Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (5) for port 'address'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/rom.v(41).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT/iRemember/memory File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/memory.v Line: 25
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Compile of m2.sv failed with 5 errors.
+# Compile of minilab1b.sv was successful.
+# 2 compiles, 1 failed with 5 errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.minilab1b
+# ** Warning: (vsim-3015) [PCDPC] - Port size (10) does not match connection size (1) for port 'LEDR'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b.sv(18).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b_tb.sv Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (5) for port 'address'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/rom.v(41).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT/iRemember/memory File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/memory.v Line: 25
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+add wave -position insertpoint  \
+sim:/minilab1b_tb/iDUT/a_ff \
+sim:/minilab1b_tb/iDUT/a_ff1
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (10) does not match connection size (1) for port 'LEDR'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b.sv(18).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b_tb.sv Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (5) for port 'address'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/rom.v(41).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT/iRemember/memory File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/memory.v Line: 25
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Compile of m2.sv failed with 5 errors.
+# Compile of minilab1b.sv was successful.
+# 2 compiles, 1 failed with 5 errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.minilab1b
+# ** Warning: (vsim-3015) [PCDPC] - Port size (10) does not match connection size (1) for port 'LEDR'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b.sv(18).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b_tb.sv Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (5) for port 'address'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/rom.v(41).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT/iRemember/memory File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/memory.v Line: 25
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+run
+# Display error! Expected:     4812 . Actual     4728
+# ** Note: $stop    : C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b_tb.sv(59)
+#    Time: 1585 ps  Iteration: 1  Instance: /minilab1b_tb
+# Break in Module minilab1b_tb at C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b_tb.sv line 59
+# Compile of m2.sv failed with 5 errors.
+# Compile of minilab1b.sv was successful.
+# 2 compiles, 1 failed with 5 errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.minilab1b
+# ** Warning: (vsim-3015) [PCDPC] - Port size (10) does not match connection size (1) for port 'LEDR'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b.sv(18).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b_tb.sv Line: 14
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (5) for port 'address'. The port definition is at: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/rom.v(41).
+#    Time: 0 ps  Iteration: 0  Instance: /minilab1b_tb/iDUT/iRemember/memory File: C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/memory.v Line: 25
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+run
+# YAHOO!!! ALL TESTS PASSED.
+# ** Note: $stop    : C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b_tb.sv(64)
+#    Time: 1655 ps  Iteration: 1  Instance: /minilab1b_tb
+# Break in Module minilab1b_tb at C:/Users/jnoro/AppData/Local/quartus/ECE554SP26_Minilab1/1b_actually0/minilab1b_tb.sv line 64
