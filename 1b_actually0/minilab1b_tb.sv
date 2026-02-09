@@ -32,14 +32,14 @@ initial begin
   display_C0X = 3'b0;
 
   // TODO: Populate expected!
-  expected[0] = 24'h;
-  expected[1] = 24'h;
-  expected[2] = 24'h;
-  expected[3] = 24'h;
-  expected[4] = 24'h;
-  expected[5] = 24'h;
-  expected[6] = 24'h;
-  expected[7] = 24'h;
+  expected[0] = 24'd4812;
+  expected[1] = 24'd21772;
+  expected[2] = 24'd38732;
+  expected[3] = 24'd55692;
+  expected[4] = 24'd72652;
+  expected[5] = 24'd89612;
+  expected[6] = 24'd106572;
+  expected[7] = 24'd123532;
 
   @(posedge clk)
   rst_n = 1'b1;
