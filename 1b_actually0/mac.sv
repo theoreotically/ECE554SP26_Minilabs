@@ -12,13 +12,36 @@ input [DATA_WIDTH-1:0] Bin,
 output reg[DATA_WIDTH*3-1:0] Cout
 );
 
+reg[DATA_WIDTH*3-1:0] tmp;
+reg en_old;
+
+always @(posedge clk, negedge rst_n) begin
+	if(!rst_n) begin
+		tmp <= 'b0;
+	end else if(Clr) begin
+		tmp <= 'b0;
+	end else if(En) begin
+		tmp <= Ain * Bin;
+	end
+end
+
+always @(posedge clk, negedge rst_n) begin
+	if(!rst_n) begin
+		en_old <= 'b0;
+	end else if(Clr) begin
+		en_old <= 'b0;
+	end else begin
+		en_old <= En;
+	end
+end
+
 always@(posedge clk, negedge rst_n)begin
 	if(!rst_n) begin
 		Cout <= 'b0;
 	end else if(Clr) begin
 		Cout <= 'b0;
-	end else if(En) begin
-		Cout += Ain * Bin;
+	end else if(en_old) begin
+		Cout <= Cout + tmp;
 	end
 end
 
