@@ -40,12 +40,14 @@ wire [7:0] rx_bus;
 bus_interface bus(
   .iocs(iocs),
   .iorw(iorw),
-  .rda(),
-  .tbr(),
+  .rda(rda),
+  .tbr(tbr),
   .ioaddr(ioaddr),
   .rxd(rx_bus),
   .databus(databus),
-  .txd(tx_bus)
+  .txd(tx_bus),
+  .tx_enable(tx_enable),
+  .rx_enable(rx_enable)
   );
 
 
@@ -54,13 +56,14 @@ baud_generator BGR(
   .rst(rst),
   .divisor(tx_bus),
   .ioaddr(ioaddr),
-  .spart_enable(spart_enable)
+  .spart_enable(shift_enable)
 );
 
 spart_tx tx(
   .clk(clk),
   .rst(rst),
-  .enable(spart_enable),
+  .enable(tx_enable),
+  .shift_enable(shift_enable),
   .ioaddr(ioaddr),
   .txd(tx_bus),
   .tbr(tbr)
@@ -69,7 +72,8 @@ spart_tx tx(
 spart_rx rx(
   .clk(clk),
   .rst(rst),
-  .enable(spart_enable),
+  .enable(rx_enable),
+  .shift_enable(shift_enable),
   .ioaddr(ioaddr),
   .rxd(rx_bus),
   .rda(rda)

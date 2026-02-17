@@ -2,8 +2,8 @@ module spart_rx(
   input clk,
   input rst,
   input enable,
-  input [1:0] ioaddr,
-  input rxd,
+  input shift_enable,
+  input [7:0] rxd,
   output reg rda
 );
 
