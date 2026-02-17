@@ -30,5 +30,17 @@ module spart(
     input rxd
     );
 
+wire spart_enable;
+
+
+// module instantiations
+baud_generator BGR(
+  .clk(clk),
+  .rst(rst),
+  .databus(databus),
+  .ioaddr(ioaddr),
+  .spart_enable(spart_enable)
+);
+
 
 endmodule
