@@ -1,14 +1,13 @@
 module baud_generator(
   input clk,
   input rst,
-  input [7:0] databus,
+  input [7:0] divisor,
   input [1:0] ioaddr,
   output spart_enable
 );
 
 // internal signals
 wire databus_high, databus_low;
-wire down_rdy;
 wire zero;
 
 // flops
@@ -36,8 +35,8 @@ always @(posedge clk, posedge rst)
   if(rst)
     divisor_buffer_ff <= 16'b0;
   else if (databus_low)
-    divisor_buffer_ff <= {divisor_buffer_ff[15:8], databus};
+    divisor_buffer_ff <= {divisor_buffer_ff[15:8], divisor};
   else if (databus_high)
-    divisor_buffer_ff <= {databus, divisor_buffer_ff[7:0]};
+    divisor_buffer_ff <= {divisor, divisor_buffer_ff[7:0]};
 
 endmodule
