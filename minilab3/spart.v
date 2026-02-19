@@ -65,7 +65,8 @@ spart_tx tx(
   .enable(tx_enable),
   .shift_enable(shift_enable),
   .ioaddr(ioaddr),
-  .txd(tx_bus),
+  .tx_bus(tx_bus),
+  .txd(txd),
   .tbr(tbr)
 );
 
@@ -75,7 +76,8 @@ spart_rx rx(
   .enable(rx_enable),
   .shift_enable(shift_enable),
   .ioaddr(ioaddr),
-  .rxd(rx_bus),
+  .rx_bus(rx_bus),
+  .rxd(rxd),
   .rda(rda)
 );
 
