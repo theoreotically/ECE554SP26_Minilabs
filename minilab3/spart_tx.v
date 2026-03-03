@@ -13,8 +13,8 @@ module spart_tx(
   //////////////////////////////////////
   typedef enum reg 
   {
-      IDLE, 
-      TRANSMIT
+    IDLE, 
+    TRANSMIT
   } state_t;
 
   state_t state, nxt_state;
@@ -76,7 +76,7 @@ module spart_tx(
   //           Control SM's FF           //
   ////////////////////////////////////////
   always_ff @(posedge clk, posedge rst)
-    if (!rst_n)     // RST
+    if (rst)     // RST
       state <= IDLE;
     else            // NXT
       state <= nxt_state;
@@ -84,8 +84,8 @@ module spart_tx(
   ////////////////////////////////////////
   //       TRANSMIT DONE RS FLOP       //
   //////////////////////////////////////
-  always_ff @(posedge clk, posedge rst_n)
-    if (!rst_n)        // RST
+  always_ff @(posedge clk, posedge rst)
+    if (rst)        // RST
       tx_done_ff <= 1'b0;
     else if (set_done) // SET
       tx_done_ff <= 1'b1;
@@ -104,8 +104,8 @@ module spart_tx(
   ////////////////////////////////////////////////
   //              SHIFT REGISTER               //
   //////////////////////////////////////////////
-  always @(posedge clk, posedge rst_n)
-    if (!rst_n)     // PRE
+  always @(posedge clk, posedge rst)
+    if (rst)     // PRE
       tx_shft_reg <= 9'b1;
     else if (init)  // accept new val
       tx_shft_reg <= {tx_bus, 1'b0};

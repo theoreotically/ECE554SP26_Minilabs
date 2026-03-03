@@ -1,6 +1,7 @@
 module baud_generator(
   input clk,
   input rst,
+  input start,
   input [7:0] divisor,
   input [1:0] ioaddr,
   output spart_enable
@@ -27,6 +28,8 @@ always @(posedge clk, posedge rst) begin
     divisor_ff <= 16'b0;
   else if(zero)
     divisor_ff <= divisor_buffer_ff;
+  else if (start)
+    divisor_ff <= {1'b0, divisor_buffer_ff[15:1]};
   else
     divisor_ff <= divisor_ff - 1;
 end

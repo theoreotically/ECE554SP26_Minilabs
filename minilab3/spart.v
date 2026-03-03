@@ -30,8 +30,6 @@ module spart(
   input rxd
 );
 
-wire spart_enable;
-
 wire [7:0] tx_bus;
 wire [7:0] rx_bus;
 
@@ -54,6 +52,7 @@ bus_interface bus(
 baud_generator BGR(
   .clk(clk),
   .rst(rst),
+  .start(start),
   .divisor(tx_bus),
   .ioaddr(ioaddr),
   .spart_enable(shift_enable)
@@ -74,6 +73,7 @@ spart_rx rx(
   .clk(clk),
   .rst(rst),
   .enable(rx_enable),
+  .start(start),
   .shift_enable(shift_enable),
   .ioaddr(ioaddr),
   .rx_bus(rx_bus),
